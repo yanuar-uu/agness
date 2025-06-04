@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Love Letter</title>
+<style>
+  :root {
+    --primary-color: #d6336c;
+    --background-gradient: linear-gradient(135deg, #f8cdda, #1f4037);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: var(--background-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .container {
+    background: rgba(255 255 255 / 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 2rem;
+    width: 360px;
+    max-width: 90vw;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.2em;
+    letter-spacing: 0.1em;
+  }
+
+  p.message {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ffe4e9;
+    margin-bottom: 2em;
+    min-height: 120px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+
+  p.message.visible {
+    opacity: 1;
+  }
+
+  button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    padding: 0.8em 2em;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(214, 51, 108, 0.6);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  button:hover {
+    background-color: #b02e59;
+    transform: translateY(-3px);
+  }
+
+  button:active {
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Aldio Anangg</h1>
+  <p class="message" id="loveMessage">
+    <!-- message will appear here -->
+  </p>
+  <button id="revealBtn">to My hOneYy</button>
+</div>
+
+<script>
+  const message = `makasih sudah keren bisa lewatin banyak ABC yang aku belom tentu isa sekuat km. makasi kemarin sudah mau berproses, progresnyaa kudu lebih. gaole terpuruk trus. lihat track recordmu bangga loh aku sm km<3.`;
+
+  const messageEl = document.getElementById('loveMessage');
+  const button = document.getElementById('revealBtn');
+
+  button.addEventListener('click', () => {
+    messageEl.textContent = message;
+    messageEl.classList.add('visible');
+    button.disabled = true;
+    button.style.cursor = 'default';
+  });
+</script>
+</body>
+</html>
+
+<html>
+  <head>
+    <title>PHP Test</title>
+  </head>
+  <body>
+    <?php echo '<p>love uu</p>'; ?> 
+
+</html>
